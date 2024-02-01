@@ -1,0 +1,1 @@
+fs.writeFileSync(filepath,"this is apple")

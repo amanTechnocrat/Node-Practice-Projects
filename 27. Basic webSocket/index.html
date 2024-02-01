@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket</title>
+</head>
+<body>
+    <h1>Web WebSocket</h1>
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quam possimus, ipsum excepturi similique pariatur distinctio, facere praesentium neque, architecto rerum sit a. Molestias cum sapiente nesciunt, necessitatibus explicabo natus.</li>
+
+    <script>
+        const ws =  new WebSocket("ws://localhost:7888")
+        ws.addEventListener("open",()=>{
+            console.log("we are connected")
+            ws.send("hey its sent data")
+        })
+
+        ws.addEventListener("message",(e)=>{
+            console.log(`server's data = ${e.data}`)
+        })
+    </script>
+
+</body>
+</html>
